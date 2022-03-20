@@ -23,10 +23,8 @@ class ProductTypeExtension extends AbstractTypeExtension
             'choice_label' => function ($value) {
                 return strtoupper($value);
             },
-
         ],
-        )
-        ;
+        );
     }
 
     public static function getExtendedTypes(): iterable
