@@ -1,2 +1,3 @@
+{% trans_default_domain "colors" %}
 <h1 id="sylius-product-name" class="ui monster dividing header" {{ sylius_test_html_attribute('product-name', product.name) }}>{{ product.name }}</h1>
-<h2>{{ product.color }}</h2>
+<h2>Color: {{ product.color|trans }}</h2>
