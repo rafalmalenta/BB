@@ -2,4 +2,6 @@ default:
     suites:
         default:
             contexts:
-                - App\Tests\Behat\Contexts\ProductContext  
+                - sylius.behat.context.setup.locale
+                - app.tests.behat.context.product              
+                      

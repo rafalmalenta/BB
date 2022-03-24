@@ -1,10 +1,7 @@
-imports:
-    - { resource: "services/contexts.yml" }
-    - { resource: "services/pages.yml" }
-    - { resource: "services/api.yml" }
-
 services:
-    app.behat.context.book:
+    _defaults: { public: true }
+    app.tests.behat.context.product:
         class: App\Tests\Behat\Contexts\ProductContext
-        tags:
-            - { name: fob.context_service }
+        public: true
+        arguments:
+          - '@doctrine.orm.entity_manager' 

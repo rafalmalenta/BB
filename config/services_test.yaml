@@ -1,5 +1,5 @@
 imports:
     - { resource: "../vendor/sylius/sylius/src/Sylius/Behat/Resources/config/services.xml" }
-    
+    - { resource: "../tests/Behat/Resources/services.yml"}
 sylius_api:
     enabled: true
