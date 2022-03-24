@@ -1,4 +1,4 @@
-Feature: Seeing prduct color
+Feature: Seeing product color
     As a Visitor
     I want to be see product color
     Background:
