@@ -25,6 +25,7 @@ class Product extends BaseProduct
 
     public function getColor(): ?string
     {
+        dd($this);
         return $this->color;
     }
     /**

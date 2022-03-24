@@ -2,6 +2,10 @@ default:
     suites:
         default:
             contexts:
+                - sylius.behat.context.setup.channel
+                - sylius.behat.context.setup.currency
                 - sylius.behat.context.setup.locale
-                - app.tests.behat.context.product              
+                - sylius.behat.context.setup.taxonomy
+                - app.tests.behat.context.product
+                - sylius.behat.context.hook.doctrine_orm
                       

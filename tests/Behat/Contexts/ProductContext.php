@@ -8,7 +8,7 @@ use App\Entity\Product;
 use Behat\Behat\Context\Context;
 use Behat\MinkExtension\Context\MinkContext;
 use Doctrine\ORM\EntityManagerInterface;
-use Sylius\Component\Product\Factory\ProductFactoryInterface;
+
 
 
 class ProductContext extends MinkContext implements Context
@@ -28,11 +28,20 @@ class ProductContext extends MinkContext implements Context
     {
 
         $product = new Product();
+        $product->setCurrentLocale("en-US");
+        $product->setCode("so");
+        $product->setName("sda");
         $product->setSlug($slug);
         $product->setColor($color);
+
         $this->entityManager->persist($product);
         $this->entityManager->flush();
     }
+//    /** @afterSuite */
+//    public function cleanDB()
+//    {
+//        $this->entityManager->createQuery('DELETE from ')
+//    }
 
 
 
