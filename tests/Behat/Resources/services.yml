@@ -1,0 +1,10 @@
+imports:
+    - { resource: "services/contexts.yml" }
+    - { resource: "services/pages.yml" }
+    - { resource: "services/api.yml" }
+
+services:
+    app.behat.context.book:
+        class: App\Tests\Behat\Contexts\ProductContext
+        tags:
+            - { name: fob.context_service }
