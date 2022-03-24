@@ -1,12 +1,10 @@
-Feature: Seeing product color
-    As a Visitor
-    I want to be see product color
+Feature: Picking color from select menu
+    As a Administrator
+    I want to be able pick product color
     Background:
         Given the store operates on a single channel in "United States"
-    Scenario: Seeing color
+    Scenario: Picking color
         Given the store has locale "en-US"
         And There is product with slug "dress" and color "czerwony"
-        And I am on "/en_US/products/dress"
+        And I am on "/dress2"
         Then I should see "red"
-
-
