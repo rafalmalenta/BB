@@ -1,6 +1,6 @@
 default:
     suites:
-        default:
+        product_view:
             contexts:
                 - sylius.behat.context.setup.channel
                 - sylius.behat.context.setup.currency
@@ -8,4 +8,5 @@ default:
                 - sylius.behat.context.setup.taxonomy
                 - app.tests.behat.context.product
                 - sylius.behat.context.hook.doctrine_orm
+                - sylius.behat.context.setup.admin_security
                       
