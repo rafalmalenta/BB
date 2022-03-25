@@ -1,3 +1,12 @@
+```bash
+$ wget http://getcomposer.org/composer.phar
+$ php composer install
+$ yarn install
+$ yarn build
+$ php bin/console sylius:install
+$ php bin/console server:start
+$ open http://localhost:8000/
+```
 <p align="center">
     <a href="https://sylius.com" target="_blank">
         <img src="https://demo.sylius.com/assets/shop/img/logo.png" />

@@ -6,7 +6,6 @@ Feature: Picking color from select menu
     Scenario: Picking color
         Given I am logged in as an administrator
         And I am on "/admin/products/new/simple"
-#        And print last response
         Then I should see select menu with option "Red"
         Then I should see select menu with option "Green"
         Then I should see select menu with option "Blue"
