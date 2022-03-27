@@ -1,3 +1,10 @@
+System requirements
+-----
+1. PHP 8.0.*
+2. NODE 10.
+
+Installation
+-----
 ```bash
 $ wget http://getcomposer.org/composer.phar
 $ php composer install

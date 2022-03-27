@@ -7,7 +7,7 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Sylius\Component\Core\Model\Product as BaseProduct;
 
-class Product extends BaseProduct
+class Product extends BaseProduct implements ProductInterface
 {
     private const RED = "Czerwony";
     private const GREEN = "Zielony";
