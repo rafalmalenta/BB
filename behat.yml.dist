@@ -1,6 +1,6 @@
 imports:
     - vendor/sylius/sylius/src/Sylius/Behat/Resources/config/suites.yml
-
+    - tests/Behat/Resources/suites.yml
 default:
     formatters:
         pretty:
@@ -48,14 +48,17 @@ default:
                         browser: firefox
             show_auto: false
 
-        FriendsOfBehat\SymfonyExtension: ~
+        FriendsOfBehat\SymfonyExtension:
+            kernel:
+                environment: test
+            bootstrap: tests/bootstrap.php
 
         FriendsOfBehat\VariadicExtension: ~
 
         FriendsOfBehat\SuiteSettingsExtension:
             paths:
-                - "vendor/sylius/sylius/features"
                 - "features"
+#                - "vendor/sylius/sylius/features"
 
     gherkin:
         filters:
