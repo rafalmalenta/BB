@@ -17,9 +17,9 @@ class Product extends BaseProduct implements ProductInterface
 
     /* @var array<string> */
    public static array $colors = [
-        "red",
-        "green",
-        "blue",
+        self::RED,
+        self::GREEN,
+        self::BlUE,
     ];
 
     public function getColor(): ?string
@@ -27,7 +27,7 @@ class Product extends BaseProduct implements ProductInterface
         return $this->color;
     }
 
-    /** @return string[] */
+    /** @return array<string> */
     public static function getColors(): array
     {
         return self::$colors;
