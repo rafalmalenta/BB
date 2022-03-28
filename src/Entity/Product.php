@@ -9,9 +9,11 @@ use Sylius\Component\Core\Model\Product as BaseProduct;
 
 class Product extends BaseProduct implements ProductInterface
 {
-    private const RED = "Czerwony";
-    private const GREEN = "Zielony";
-    private const BlUE = "Niebieski";
+    protected const RED = "Czerwony";
+    protected const GREEN = "Zielony";
+    protected const BlUE = "Niebieski";
+
+    protected ?string $color;
 
     /* @var string[] $colors */
     public static array $colors = [
@@ -20,24 +22,19 @@ class Product extends BaseProduct implements ProductInterface
         self::BlUE,
     ];
 
-    private ?string $color;
+
 
 
     public function getColor(): ?string
     {
         return $this->color;
     }
-    /**
-     * @return string[]
-     */
+    /** @return string[] */
     public static function getColors(): array
     {
         return self::$colors;
     }
 
-    /**
-     * @param string|null $color
-     */
     public function setColor(?string $color): void
     {
         $this->color = $color;

@@ -1,7 +1,0 @@
-services:
-    _defaults: { public: true }
-    app.tests.behat.context.product:
-        class: App\Tests\Behat\Contexts\ProductContext
-        public: true
-        arguments:
-          - '@doctrine.orm.entity_manager' 

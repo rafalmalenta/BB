@@ -1,6 +1,7 @@
 Feature: Seeing product color
     As a Visitor
     I want to be see product color
+
     Background:
         Given the store operates on a single channel in "United States"
 

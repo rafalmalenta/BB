@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Behat\Contexts;
+namespace App\Tests\Behat\Context;
 
 use App\Entity\Product;
 use Behat\Behat\Context\Context;
@@ -11,7 +11,7 @@ use Doctrine\ORM\EntityManagerInterface;
 
 require_once __DIR__.'/../../../vendor/phpunit/phpunit/src/Framework/Assert/Functions.php';
 
-class ProductContext extends MinkContext implements Context
+final class ProductContext extends MinkContext implements Context
 {
 
     private EntityManagerInterface $entityManager;
@@ -24,7 +24,7 @@ class ProductContext extends MinkContext implements Context
     /**
      * @Given There is product with slug :slug and color :color
      */
-    public function thereIsProductWithSlugAndColor($slug, $color):void
+    public function thereIsProductWithSlugAndColor(string $slug, string $color): void
     {
 
         $product = new Product();
@@ -40,15 +40,11 @@ class ProductContext extends MinkContext implements Context
     /**
      * @Then I should see select menu with option :color
      */
-    public function iShouldSeeSelectMenuWithOption($color):void
+    public function iShouldSeeSelectMenuWithOption(string $color): void
     {
         $page = $this->getSession()->getPage();
         $selectMenu = $page->find('css','#sylius_product_color');
-//        var_dump($selectMenu->find('named',['option',"Red"])->getText());
         assertNotEmpty($selectMenu->find('named',['option',"$color"])->getText(), "there is no such option");
-//        var_dump(substr($selectMenu->getHtml(),0,1150));
-//        assertNotEmpty($selectMenu);
-
     }
 
 
