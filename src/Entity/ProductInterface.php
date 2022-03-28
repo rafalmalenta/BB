@@ -12,7 +12,7 @@ interface ProductInterface extends baseInterface
 //    const GREEN = ''Green';
 //    const BlUE = 'Blue';
 
-    const COLORS = [
+    public const COLORS = [
         'Red',
         'Green',
         'Blue',
