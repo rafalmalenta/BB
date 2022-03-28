@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Form\Extension;
 
-use App\Entity\Product;
+use App\Entity\ProductInterface;
 use Sylius\Bundle\ProductBundle\Form\Type\ProductType;
 use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\Form\ChoiceList\Loader\CallbackChoiceLoader;
@@ -24,7 +24,7 @@ class ProductTypeExtension extends AbstractTypeExtension
             [
             'placeholder' => 'pick color',
             'choice_loader' => new CallbackChoiceLoader(function () {
-                return Product::getColors();
+                return ProductInterface::COLORS;
             }),
             'choice_label' => function ($value) {
                 return $value;
