@@ -15,20 +15,18 @@ class Product extends BaseProduct implements ProductInterface
 
     protected ?string $color;
 
-    /* @var string[] $colors */
-    public static array $colors = [
-        self::RED,
-        self::GREEN,
-        self::BlUE,
+    /* @var array<string> */
+   public static array $colors = [
+        "red",
+        "green",
+        "blue",
     ];
-
-
-
 
     public function getColor(): ?string
     {
         return $this->color;
     }
+
     /** @return string[] */
     public static function getColors(): array
     {

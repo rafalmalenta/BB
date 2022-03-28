@@ -15,6 +15,9 @@ use App\Entity\Product;
 
 class ProductTypeExtension extends AbstractTypeExtension
 {
+    /**
+     * @param array<string, mixed> $options
+     */
     public function buildForm(FormBuilderInterface $builder, array $options ): void
     {
         $builder->add("color", ChoiceType::class, [
