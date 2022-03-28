@@ -8,15 +8,14 @@ use Sylius\Component\Core\Model\ProductInterface as baseInterface;
 
 interface ProductInterface extends baseInterface
 {
-//    const RED = 'Red';
-//    const GREEN = ''Green';
-//    const BlUE = 'Blue';
-
     public const COLORS = [
         'Red',
         'Green',
         'Blue',
     ];
+
+    /** @return array<string> */
+    public static function getColors(): array;
 
     public function getColor(): ?string;
 

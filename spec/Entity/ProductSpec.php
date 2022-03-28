@@ -3,6 +3,7 @@
 namespace spec\App\Entity;
 
 use App\Entity\Product;
+use App\Entity\ProductInterface;
 use PhpSpec\ObjectBehavior;
 
 final class ProductSpec extends ObjectBehavior
@@ -13,8 +14,8 @@ final class ProductSpec extends ObjectBehavior
     }
     function it_should_have_RGB_colors(): void
     {
-        self::getColors()->shouldContain("Czerwony");
-        self::getColors()->shouldContain("Zielony");
-        self::getColors()->shouldContain("Niebieski");
+        self::getColors()->shouldContain("Red");
+        self::getColors()->shouldContain("Green");
+        self::getColors()->shouldContain("Blue");
     }
 }

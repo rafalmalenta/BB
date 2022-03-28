@@ -20,6 +20,12 @@ class Product extends BaseProduct implements ProductInterface
         $this->color = $color;
     }
 
+    /** @return array<string> */
+    public static function getColors(): array
+    {
+        return self::COLORS;
+    }
+
     public function __construct()
     {
         parent::__construct();
