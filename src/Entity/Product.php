@@ -16,8 +16,7 @@ class Product extends BaseProduct implements ProductInterface
 
     protected ?string $color;
 
-    /* @var array<string> */
-    public static iterable $colors = [
+    protected const COLORS = [
         self::RED,
         self::GREEN,
         self::BlUE,
@@ -31,7 +30,7 @@ class Product extends BaseProduct implements ProductInterface
     /** @return array<string> */
     public static function getColors(): array
     {
-        return self::$colors;
+        return self::COLORS;
     }
 
     public function setColor(?string $color): void
